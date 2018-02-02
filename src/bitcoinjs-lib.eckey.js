@@ -117,7 +117,7 @@ Bitcoin.ECKey = (function () {
 		KeyPool.push(this);
 	};
 
-	ECKey.privateKeyPrefix = 0xD1; // mainnet 0xD1 ('Y' or 'X')    testnet 0xEF ('9' or 'c')
+	ECKey.privateKeyPrefix = 0x4D; // mainnet 0x4D ('Y' or 'X')    testnet 0xEF ('9' or 'c')
 
 	/**
 	* Whether public keys should be returned compressed by default.
@@ -306,7 +306,7 @@ Bitcoin.ECKey = (function () {
 	// 51 characters base58, always starts with a '7'
 	ECKey.isWalletImportFormat = function (key) {
 		key = key.toString();
-		return (ECKey.privateKeyPrefix == 0xD1) ? 
+		return (ECKey.privateKeyPrefix == 0x4D) ? 
 							(/[^XY][123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{50}$/.test(key)):
 							(/[^9c][123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{50}$/.test(key));
 	};
@@ -314,7 +314,7 @@ Bitcoin.ECKey = (function () {
 	// 52 characters base58
 	ECKey.isCompressedWalletImportFormat = function (key) {
 		key = key.toString();
-		return (ECKey.privateKeyPrefix == 0xD1) ?
+		return (ECKey.privateKeyPrefix == 0x4D) ?
 							(/[^XY][123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{51}$/.test(key)) :
 							(/[^9c][123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{51}$/.test(key));
 	};
