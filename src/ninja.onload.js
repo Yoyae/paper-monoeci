@@ -19,7 +19,7 @@ if (ninja.getQueryString()["testnet"] == "true" || ninja.getQueryString()["testn
 	document.getElementById("testnet").style.display = "block";
 	document.getElementById("detailwifprefix").innerHTML = "'9'";
 	document.getElementById("detailcompwifprefix").innerHTML = "'c'";
-	Bitcoin.Address.networkVersion = 0x0B; // testnet
+	Bitcoin.Address.networkVersion = 0x8B; // testnet
 	Bitcoin.ECKey.privateKeyPrefix = 0xEF; // testnet
 	ninja.testnetMode = true;
 }
