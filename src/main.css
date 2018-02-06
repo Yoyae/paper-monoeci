@@ -163,7 +163,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
 	{
 	    position: relative; display: inline-block; border: 0px solid red;
 	    margin: 0; list-style: none; z-index: 110; cursor: pointer; 
-	    top: 1px; padding: 10px 20px; width: 212px; text-align: center;
+	    top: 1px; padding: 10px 20px; width: 212px; text-align: center; font-weight: bold;
 	}
 	.menu .tab.selected  
 	{
